@@ -12,6 +12,11 @@
                 break;
             case "admin":
                 $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Add"),
+                    "icon" => "icon-plus",
+                    "url" => array("add")
+                ));
+                $this->widget("bootstrap.widgets.TbButton", array(
                     "label" => Yii::t("' . $this->messageCatalog . '", "Create"),
                     "icon" => "icon-plus",
                     "url" => array("create")
@@ -22,6 +27,11 @@
                     "label" => Yii::t("' . $this->messageCatalog . '", "Manage"),
                     "icon" => "icon-list-alt",
                     "url" => array("admin")
+                ));
+                $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Edit"),
+                    "icon" => "icon-edit",
+                    "url" => array("continueAuthoring", "id" => $model->{$model->tableSchema->primaryKey})
                 ));
                 $this->widget("bootstrap.widgets.TbButton", array(
                     "label" => Yii::t("' . $this->messageCatalog . '", "Update"),

@@ -3,7 +3,28 @@
         <?php
         echo '<?php
         switch ($this->action->id) {
+            case "index":
+                $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Manage"),
+                    "icon" => "icon-edit",
+                    "url" => array("admin")
+                ));
+                $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Add"),
+                    "icon" => "icon-edit",
+                    "url" => array("add")
+                ));
             case "view":
+                $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Manage"),
+                    "icon" => "icon-edit",
+                    "url" => array("admin")
+                ));
+                $this->widget("bootstrap.widgets.TbButton", array(
+                    "label" => Yii::t("' . $this->messageCatalog . '", "Edit"),
+                    "icon" => "icon-edit",
+                    "url" => array("continueAuthoring", "id" => $model->{$model->tableSchema->primaryKey})
+                ));
                 $this->widget("bootstrap.widgets.TbButton", array(
                     "label" => Yii::t("' . $this->messageCatalog . '", "Update"),
                     "icon" => "icon-edit",
