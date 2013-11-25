@@ -1,7 +1,7 @@
 <div class="view well well-white">
 
     <?php
-    echo "<div class=\"admin-container show\">
+    echo "<div class=\"admin-container hide\">
             <?php echo CHtml::link('<i class=\"icon-eye-open\"></i> ' . Yii::t('" . $this->messageCatalog . "', 'View {model}', array('{model}' => Yii::t('" . $this->messageCatalog . "', '" . $this->class2name($this->modelClass) . "'))), array('{$this->controller}/view', 'id' => \$data->id), array('class' => 'btn')); ?>
     </div>\n";?>
     <?php
@@ -26,13 +26,13 @@
         echo "    */\n    ?>\n";
    
     echo "    <?php if (Yii::app()->user->checkAccess('{$this->modelClass}.*')): ?>
-        <div class=\"admin-container show\">
+        <div class=\"admin-container hide\">
             <?php echo CHtml::link('<i class=\"icon-edit\"></i> ' . Yii::t('" . $this->messageCatalog . "', 'Edit {model}', array('{model}' => Yii::t('" . $this->messageCatalog . "', '" . $this->class2name($this->modelClass) . "'))), array('{$this->controller}/continueAuthoring', 'id' => \$data->id, 'returnUrl' => Yii::app()->request->url), array('class' => 'btn')); ?>
         </div>
     <?php endif; ?>\n";
 
     echo "    <?php if (Yii::app()->user->checkAccess('Developer')): ?>
-        <div class=\"admin-container show\">
+        <div class=\"admin-container hide\">
             <h3>Developer access</h3>
             <?php echo CHtml::link('<i class=\"icon-edit\"></i> ' . Yii::t('" . $this->messageCatalog . "', 'Update {model}', array('{model}' => Yii::t('" . $this->messageCatalog . "', '" . $this->class2name($this->modelClass) . "'))), array('{$this->controller}/update', 'id' => \$data->id, 'returnUrl' => Yii::app()->request->url), array('class' => 'btn')); ?>
         </div>
