@@ -7,7 +7,7 @@ echo "\$this->breadcrumbs[] = \$model->{$this->tableSchema->primaryKey};\n";
 echo "?>";
 ?>
 
-<?php echo '<?php $this->widget("TbBreadcrumbs", array("links" => $this->breadcrumbs)) ?>'; ?>
+<?php echo '<?php $this->widget("\TbBreadcrumb", array("links" => $this->breadcrumbs)) ?>'; ?>
 
 <h1>
     <?=
@@ -60,7 +60,7 @@ if ($count >= 7)
         <?=
         "<?php
         \$this->widget(
-            'TbDetailView',
+            '\TbDetailView',
             array(
                 'data' => \$model,
                 'attributes' => array(
