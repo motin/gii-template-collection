@@ -11,7 +11,7 @@
                 ));
                 $this->widget("\TbButton", array(
                     "label" => Yii::t("' . $this->messageCatalog . '", "Add"),
-                    "icon" => "glyphicon-edit",
+                    "icon" => "glyphicon-plus",
                     "url" => array("add")
                 ));
                 break;
