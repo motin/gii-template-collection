@@ -127,17 +127,6 @@ if(!empty($enum)){
         ?>;
     }
 
-    public function behaviors()
-    {
-        return array_merge(
-            parent::behaviors(), array(
-                'savedRelated' => array(
-                    'class' => '\GtcSaveRelationsBehavior'
-                )
-            )
-        );
-    }
-
     public function relations()
     {
         return array_merge(
